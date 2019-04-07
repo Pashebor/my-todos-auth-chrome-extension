@@ -1,0 +1,18 @@
+{
+  "manifest_version": 2,
+  "name": "Organizer authorization",
+  "description": "Quick authorization at Organizer application",
+  "version": "1.0.0",
+  "icons": {"128": "icon.png"},
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+   {
+     "matches": ["http://ec2-52-47-124-50.eu-west-3.compute.amazonaws.com/"],
+     "js": ["popup.js"]
+   }
+ ],
+  "permissions": ["activeTab"]
+}
