@@ -2,12 +2,12 @@
     const email = document.querySelector('input[name=email]'),
         password = document.querySelector('input[name=password]'),
         submitButton = document.querySelector('button[type=submit]'),
-        fieldsExsits = !!(email && password && submitButton);
+        fieldsExists = !!(email && password && submitButton);
 
-        if(fieldsExsits) {
+        if(fieldsExists) {
           chrome.storage.local.get(['auth'], (response) => {
             const authData = response.auth;
-              
+
             if(!authData) {
                submitButton.addEventListener('click', () => {
                  const data = {
